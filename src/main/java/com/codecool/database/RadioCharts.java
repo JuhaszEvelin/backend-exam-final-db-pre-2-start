@@ -19,8 +19,9 @@ public class RadioCharts {
         String query = "SELECT song " +
                 "FROM music_broadcast " +
                 "GROUP BY song " +
-                "ORDER BY SUM(times_aired) DESC";
+                "ORDER BY SUM(times_aired) DESC, song DESC";
 
+        System.out.println(getResult(query, "song"));
         return getResult(query, "song");
     }
 
